@@ -1,7 +1,0 @@
-<Window x:Class="AAgIO.Views.KeyboardView"
-				xmlns="https://github.com/avaloniaui" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-	Title="Keyboard">
-	<Grid Height="544" Width="929">
-		<TextBox Name="keyboardString" Height="46" Width="751" TabIndex="0" Margin="88,-11,90,509" HorizontalAlignment="Right" VerticalAlignment="Bottom" TextWrapping="Wrap" ></TextBox>
-	</Grid>
-</Window>
