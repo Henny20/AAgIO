@@ -1,0 +1,20 @@
+<Window x:Class="AAgIO.Views.RadioChannelView"
+			xmlns="https://github.com/avaloniaui" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+			 Icon="/Assets/AgIOAoG.ico" SizeToContent="WidthAndHeight" CanResize="False"
+	Title="Radio Channel">
+	<Grid Height="269" Width="447" Margin="20">
+		<TextBox x:Name="tbLon" Height="23" Width="358" TabIndex="10" Margin="78,143,11,103" HorizontalAlignment="Right" VerticalAlignment="Bottom" TextWrapping="Wrap" ></TextBox>
+		<TextBlock x:Name="labelLon" Height="25" Width="84" FontSize="11" FontFamily="Microsoft Sans Serif" TabIndex="11" Margin="7,146,356,98" HorizontalAlignment="Right" VerticalAlignment="Bottom" >Longitude</TextBlock>
+		<TextBox x:Name="tbId" Height="23" Width="358" TabIndex="0" Margin="78,-3,11,249" HorizontalAlignment="Right" VerticalAlignment="Bottom" TextWrapping="Wrap" ></TextBox> <!--Click="tbox_Click"-->
+		<TextBlock x:Name="labelId" Height="25" Width="29" FontSize="11" FontFamily="Microsoft Sans Serif" TabIndex="6" Margin="62,0,356,244" HorizontalAlignment="Right" VerticalAlignment="Bottom" >Id</TextBlock>
+		<Button x:Name="btnSerialCancel" Height="62" Width="88" TabIndex="5" Margin="205,180,154,27" HorizontalAlignment="Right" VerticalAlignment="Bottom" > <Image Source="avares://AAgIO/Assets/Cancel64.png"/></Button>
+		<Button x:Name="btnSerialOK" Height="62" Width="88" TabIndex="4" Click="btnSerialOK_Click" Margin="332,180,27,27" HorizontalAlignment="Right" VerticalAlignment="Bottom" > <Image Source="avares://AAgIO/Assets/OK64.png"/></Button>
+		<TextBox x:Name="tbLat" Height="23" Width="358" TabIndex="3" Margin="78,107,11,139" HorizontalAlignment="Right" VerticalAlignment="Bottom" TextWrapping="Wrap" ></TextBox> <!--Click="tbox_Click"-->
+		<TextBlock x:Name="labelLat" Height="25" Width="71" FontSize="11" FontFamily="Microsoft Sans Serif" TabIndex="9" Margin="20,110,356,134" HorizontalAlignment="Right" VerticalAlignment="Bottom" >Latitude</TextBlock>
+		<TextBox x:Name="tbFrequency" Height="23" Width="358" TabIndex="2" Margin="78,69,11,177" HorizontalAlignment="Right" VerticalAlignment="Bottom" TextWrapping="Wrap" ></TextBox> <!--Click="tbox_Click"-->
+		<TextBlock x:Name="label1" Height="25" Width="89" FontSize="11" FontFamily="Microsoft Sans Serif" TabIndex="8" Margin="2,72,356,172" HorizontalAlignment="Right" VerticalAlignment="Bottom" >Frequency</TextBlock>
+		<TextBox x:Name="tbName" Height="23" Width="358" TabIndex="1"  Margin="78,33,11,213" HorizontalAlignment="Right" VerticalAlignment="Bottom" TextWrapping="Wrap" ></TextBox> <!--Click="tbox_Click"-->
+		<TextBlock x:Name="labelName" Height="25" Width="57" FontSize="11" FontFamily="Microsoft Sans Serif" TabIndex="7" Margin="34,36,356,208" HorizontalAlignment="Right" VerticalAlignment="Bottom" >Name</TextBlock>
+	</Grid>
+</Window>
+

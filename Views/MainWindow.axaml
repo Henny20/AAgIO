@@ -1,0 +1,207 @@
+<Window xmlns="https://github.com/avaloniaui" 
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+        x:Class="AAgIO.Views.MainWindow" 
+        Icon="/Assets/AgIO_ico.ico"
+        Width="480"
+        Title="AgIO v5.6">
+  <Grid Margin="20" >
+    <Grid.ColumnDefinitions>
+      <ColumnDefinition Width="100"/>
+      <ColumnDefinition Width="100"/>
+      <ColumnDefinition Width="200"/>
+      <ColumnDefinition Width="100"/>
+      <ColumnDefinition Width="50"/>
+      <ColumnDefinition Width="150"/>
+      <ColumnDefinition Width="100"/>
+    </Grid.ColumnDefinitions>
+    <Grid.RowDefinitions>
+      <RowDefinition Height="Auto"/>
+      <RowDefinition Height="Auto"/>
+    </Grid.RowDefinitions>
+    <StackPanel Grid.Column="0" Grid.Row="0" Spacing ="20">
+      <TextBlock x:Name="label6" FontSize="11" FontFamily="Microsoft Sans Serif" FontWeight="Bold" Background="Transparent">Lat</TextBlock>
+      <TextBlock x:Name="lblCurrentLat" FontSize="11" FontFamily="Microsoft Sans Serif" Background="Transparent">-53.1234567</TextBlock>
+      <TextBlock x:Name="label8" FontSize="11" FontFamily="Microsoft Sans Serif" FontWeight="Bold" Background="Transparent">Lon</TextBlock>
+      <TextBlock x:Name="lblCurentLon" FontSize="11" FontFamily="Microsoft Sans Serif" Background="Transparent">-888.8888888</TextBlock>
+      <WrapPanel>
+        <TextBlock x:Name="label7" TabIndex="0" FontSize="11" FontFamily="Microsoft Sans Serif" FontWeight="Bold" Background="Transparent">Min</TextBlock>
+        <TextBlock x:Name="lblSkipCounter" Margin="10 0" FontSize="11" FontFamily="Microsoft Sans Serif" Background="Transparent">285</TextBlock>
+      </WrapPanel>
+      <Button x:Name="btnUDP" Height="60" Width="82" Foreground="Black" Background="Gainsboro" Click="btnUDP_Click">
+          <Image Source="avares://AAgIO/Assets/B_UDP.png"/>
+      </Button>
+      <TextBlock x:Name="label1" FontSize="11" FontFamily="Microsoft Sans Serif" FontWeight="Bold" Background="Transparent">Com Ports:</TextBlock>
+      <TextBox x:Name="lblSerialPorts" IsReadOnly="True" FontSize="11" FontFamily="Microsoft Sans Serif" Background="Transparent">Com12</TextBox>
+      <Button x:Name="lblIP" Height="27" Width="114" FontSize="11" FontFamily="Microsoft Sans Serif" Background="Transparent" Click="lblIP_Click">255.255.255.0</Button>
+      
+    </StackPanel>
+    <StackPanel Grid.Column="1" Spacing="20" Grid.Row="0" >
+		<Button x:Name="btnStartStopNtrip" Height="27" Width="80" Foreground="Black" FontSize="11" Background="LightGray" Click="btnStartStopNtrip_Click" Content="StartStop">
+		 </Button>
+		
+		<TextBlock x:Name="lblWatch" FontSize="11" FontFamily="Microsoft Sans Serif" Background="Transparent">Watch</TextBlock>
+		
+		<Button x:Name="lblNTRIPBytes" Height="27" Width="114" FontSize="11" FontFamily="Microsoft Sans Serif" Background="Transparent" Click="lblNTRIPBytes_Click">999,999,999</Button>
+		
+    </StackPanel>
+    <StackPanel Grid.Column="2" Grid.Row="0" Spacing="20">
+     
+      <Button x:Name="pictureBox2" Click="pictureBox2_Click">
+        <Image Source="avares://AAgIO/Assets/InOut.png"/>
+      </Button>  
+      <Panel>
+          <TextBlock x:Name="lblIMUComm" FontSize="11" FontFamily="Microsoft Sans Serif" Background="Transparent" HorizontalAlignment="Left" Text="--"/>
+		  <Button x:Name="btnIMU" Height="59" Width="84" Background="Transparent" HorizontalAlignment="Center" Click="btnBringUpCommSettings_Click">
+		    <Image Source="avares://AAgIO/Assets/B_IMU.png"/>
+		  </Button>
+		 <TextBlock x:Name="lblFromMU" FontSize="11" FontFamily="Microsoft Sans Serif" Background="Transparent" HorizontalAlignment="Right" VerticalAlignment="Center" Text="---"/>
+      </Panel>
+      <Panel>
+          <TextBlock x:Name="lblMod1Comm" FontSize="11" FontFamily="Microsoft Sans Serif" Background="Transparent" HorizontalAlignment="Left" Text="--"/>
+		  <Button x:Name="btnSteer" Height="59" Width="84"  Background="Transparent" HorizontalAlignment="Center" Click="btnBringUpCommSettings_Click">
+		    <Image Source="avares://AAgIO/Assets/B_Autosteer.png"/>
+		  </Button>
+		  <TextBlock x:Name="lblFromSteer" FontSize="11" FontFamily="Microsoft Sans Serif" Background="Transparent" HorizontalAlignment="Right" VerticalAlignment="Top" Text="---"/>
+		  <TextBlock x:Name="lblToSteer" FontSize="11" FontFamily="Microsoft Sans Serif" Background="Transparent" HorizontalAlignment="Right" VerticalAlignment="Bottom" Text="---"/>
+      </Panel>		  
+      <Panel>
+       <TextBlock x:Name="lblGPS1Comm" FontSize="11" FontFamily="Microsoft Sans Serif" Background="Transparent" HorizontalAlignment="Left" Text="--"/>
+		 <Button x:Name="btnGPS" Height="59" Width="84" Background="Transparent" HorizontalAlignment="Center"  Click="btnBringUpCommSettings_Click" >
+		   <Image x:Name="btnGPS_Image" Source="avares://AAgIO/Assets/B_GPS.png"/>
+		 </Button>
+		  <TextBlock x:Name="lblFromGPS" FontSize="11" FontFamily="Microsoft Sans Serif" Background="Transparent" Text="---" HorizontalAlignment="Right" VerticalAlignment="Top"/>
+		 <TextBlock x:Name="lblToGPS" FontSize="11" FontFamily="Microsoft Sans Serif" Background="Transparent" Text="--" HorizontalAlignment="Right" VerticalAlignment="Bottom"/>
+	   </Panel>
+       <Panel>
+           <TextBlock x:Name="lblMod2Comm" FontSize="11" FontFamily="Microsoft Sans Serif" Background="Transparent" HorizontalAlignment="Left" Text="--"/>
+		  <Button x:Name="btnMachine" Height="59" Width="84" Background="Transparent" HorizontalAlignment="Center" Click="btnBringUpCommSettings_Click">
+		    <Image Source="avares://AAgIO/Assets/B_Machine.png"/>
+		  </Button>
+		  <TextBlock x:Name="lblFromMachine" FontSize="11" FontFamily="Microsoft Sans Serif" Background="Transparent" HorizontalAlignment="Right" VerticalAlignment="Bottom" Text="--"/>
+		  <TextBlock x:Name="lblToMachine" FontSize="11" FontFamily="Microsoft Sans Serif" Background="Transparent" HorizontalAlignment="Right" VerticalAlignment="Top" Text="--"/>
+	  </Panel>
+    </StackPanel>  
+    <StackPanel Grid.Column="3" Spacing="20" Grid.Row="0">
+        <Button x:Name="btnSlide" Height="43" Width="55" Click="btnSlide_Click">
+          <Image x:Name="btnSlide_Image" Source="avares://AAgIO/Assets/ArrowGrnRight.png"/>
+        </Button>
+    </StackPanel>
+    <StackPanel Grid.Column="4" Grid.Row="0">
+       <CheckBox x:Name="cboxIsIMUModule" Height="27" Width="26" Margin="0 50" Background="Transparent" Click="cboxIsIMUModule_Click" IsChecked="True"/>
+       <CheckBox x:Name="cboxIsSteerModule" Height="27" Width="26" Margin="0 50" Background="Transparent" Click="cboxIsSteerModule_Click" IsChecked="True"/>
+       <CheckBox x:Name="cboxIsMachineModule" Height="27" Width="26" Margin="0 20" Background="Transparent" Click="cboxIsMachineModule_Click"  IsChecked="True"/>	
+    </StackPanel>
+    <StackPanel Grid.Column="5" Spacing="5" Margin="10"  Grid.Row="0">
+     <!--RTK caster-->
+     <TextBlock x:Name="lblMount" FontSize="11" FontFamily="Microsoft Sans Serif" Background="Transparent" Text="--"/>
+     <TextBlock x:Name="lblNTRIP_IP" FontSize="11" FontFamily="Microsoft Sans Serif" Background="Transparent" Text="--"/>
+     <!--Steer module--> 	 
+     <TextBlock x:Name="lblWorkSwitchStatus" FontSize="11" FontFamily="Microsoft Sans Serif" Background="Transparent">*</TextBlock>
+     <TextBlock x:Name="label9" FontSize="11" FontFamily="Microsoft Sans Serif" Background="Transparent">Work:</TextBlock>
+     <TextBlock x:Name="lblSwitchStatus" FontSize="11" FontFamily="Microsoft Sans Serif" Background="Transparent">*</TextBlock>
+     <TextBlock x:Name="label2" FontSize="11" FontFamily="Microsoft Sans Serif" Background="Transparent">Switch:</TextBlock>
+     <TextBlock x:Name="lblWASCounts" FontSize="11" FontFamily="Microsoft Sans Serif" Background="Transparent">Only</TextBlock>
+     <TextBlock x:Name="lblSteerAngle" FontSize="11" FontFamily="Microsoft Sans Serif" Background="Transparent">UDP</TextBlock>
+     <TextBlock x:Name="label4" FontSize="11" FontFamily="Microsoft Sans Serif" Background="Transparent">Counts:</TextBlock>
+     <TextBlock x:Name="label3" FontSize="11" FontFamily="Microsoft Sans Serif" Background="Transparent">Angle:</TextBlock>
+     <!--Machine module section on-off-->
+     <TextBlock x:Name="label10" FontSize="11" FontFamily="Microsoft Sans Serif" Background="Transparent">8  &lt;&lt;  1</TextBlock> 
+     <TextBlock x:Name="lbl1To8" FontSize="11" FontFamily="Microsoft Sans Serif" Background="Transparent">00000000</TextBlock>
+     <TextBlock x:Name="label12" FontSize="11" FontFamily="Microsoft Sans Serif" Background="Transparent">16 &lt;&lt;  9</TextBlock>
+     <TextBlock x:Name="lbl9To16" FontSize="11" FontFamily="Microsoft Sans Serif" Background="Transparent">00000000</TextBlock>
+     <Button x:Name="btnRelayTest" Height="73" Width="61"  Background="Transparent" Click="btnRelayTest_Click" Content="Test">
+      <Image Source="avares://AAgIO/Assets/TestRelays.png"/>
+    </Button>
+    </StackPanel>
+    <StackPanel Grid.Column="6" Spacing="5" Margin="10" Grid.Row="0">
+     <WrapPanel>
+      <TextBlock x:Name="label13" FontSize="11" FontFamily="Microsoft Sans Serif" Background="Transparent">ID:</TextBlock>
+      <TextBlock x:Name="lblStationID" FontSize="11" FontFamily="Microsoft Sans Serif" Background="Transparent">0</TextBlock>
+     </WrapPanel> 
+     <WrapPanel>
+      <TextBlock x:Name="label11" FontSize="11" FontFamily="Microsoft Sans Serif" Background="Transparent">L:</TextBlock>
+      <TextBlock x:Name="lblPacketSize" FontSize="11" FontFamily="Microsoft Sans Serif" Background="Transparent">0</TextBlock>
+     </WrapPanel>
+      <WrapPanel>
+      <TextBlock x:Name="label5" FontSize="11" FontFamily="Microsoft Sans Serif" Background="Transparent">Found:</TextBlock>
+      <TextBlock x:Name="lblCount" FontSize="11" FontFamily="Microsoft Sans Serif" Background="Transparent">-</TextBlock>
+     </WrapPanel>
+      <Button x:Name="lblMessages" Height="335" Width="87" FontSize="11" FontFamily="Microsoft Sans Serif" Background="Transparent" Click="lblMessages_Click">1888 - 18</Button>
+      <TextBlock x:Name="lblMessagesFound" FontSize="11" FontFamily="Microsoft Sans Serif" Background="Transparent">0</TextBlock>
+     
+    </StackPanel>
+    <StackPanel Orientation="Horizontal" Grid.Row="1" >
+    <Button x:Name="btnExit" Height="58" Width="63" Background="Transparent" Click="btnExit_Click">
+      <Image Source="avares://AAgIO/Assets/SwitchOff.png"/>
+    </Button>
+    <Button x:Name="statusStrip1" Height="58" Width="63" Margin="40 0" VerticalAlignment="Center"
+                        HorizontalAlignment="Center">
+        <Image Source="avares://AAgIO/Assets/Settings48.png" />
+        <Button.Flyout>
+            <MenuFlyout Placement="Right">
+                <MenuItem Header="Save" FontSize="20" x:Name="toolStripMenuItem1" Click="toolStripMenuItem1_Click">
+                   <MenuItem.Icon>
+                     <Image Width="20" Height="20" Source="avares://AAgIO/Assets/VehFileSave.png"/>
+                   </MenuItem.Icon>  
+                 </MenuItem>   
+                <MenuItem Header="Load" x:Name="toolStripMenuItem2" FontSize="20" Click="toolStripMenuItem2_Click">
+                    <MenuItem.Icon>
+                     <Image Width="20" Height="20" Stretch="UniformToFill" Source="avares://AAgIO/Assets/VehFileLoad.png"/>
+                   </MenuItem.Icon>  
+                 </MenuItem>   
+                <MenuItem Header="GPS Data" x:Name="toolStripMenuItem4" FontSize="20" Click="toolStripMenuItem4_Click" >
+                    <MenuItem.Icon>
+                     <Image Width="20" Height="20" Stretch="UniformToFill" Source="avares://AAgIO/Assets/Satellite.png"/>
+                   </MenuItem.Icon>  
+                 </MenuItem>   
+                <MenuItem Header="Device Manager" x:Name="deviceManagerToolStripMenuItem" FontSize="20" Click="deviceManagerToolStripMenuItem_Click" >
+                    <MenuItem.Icon>
+                     <Image Width="20" Height="20" Stretch="UniformToFill" Source="avares://AAgIO/Assets/DeviceManager.png"/>
+                   </MenuItem.Icon>  
+                </MenuItem>   
+            </MenuFlyout>
+        </Button.Flyout>
+    </Button>
+     <Button x:Name="settingsMenuStrip" Height="58" Width="63" Margin="40 0" VerticalAlignment="Center"
+                        HorizontalAlignment="Center">
+        <Image Source="avares://AAgIO/Assets/NtripSettings.png" />
+        <Button.Flyout>
+            <MenuFlyout Placement="Right">
+                <MenuItem Header="Client NTRIP" x:Name="saveToolStrip"  FontSize="20" Click="btnNTRIP_Click">
+                   <MenuItem.Icon>
+                     <Image Width="20" Height="20" Stretch="UniformToFill" Source="avares://AAgIO/Assets/NTRIP_Client.png"/>
+                   </MenuItem.Icon>  
+                </MenuItem>   
+                <MenuItem Header="Radio NTRIP" x:Name="loadToolStrip"  FontSize="20" Click="btnRadio_Click_1">
+                   <MenuItem.Icon>
+                     <Image Width="20" Height="20" Stretch="UniformToFill" Source="avares://AAgIO/Assets/RadioSettings.png"/>
+                   </MenuItem.Icon>  
+                </MenuItem>   
+                <MenuItem Header="Serial NTRIP" x:Name="serialPassThroughToolStripMenuItem"  FontSize="20" Click="serialPassThroughToolStripMenuItem_Click" >
+                   <MenuItem.Icon>
+                     <Image Width="20" Height="20" Stretch="UniformToFill" Source="avares://AAgIO/Assets/NTRIP_Serial.png"/>
+                   </MenuItem.Icon>  
+                </MenuItem>   
+            </MenuFlyout>
+        </Button.Flyout>
+    </Button>
+    <Button x:Name="btnRunAOG" Height="58" Width="63"  Margin="30 0" Foreground="LightBlue" Background="Transparent" Click="btnRunAOG_Click" >
+      <Image Source="avares://AAgIO/Assets/AgIOBtn.png"/>
+    </Button>
+     <Button x:Name="btnResetTimer" Height="58" Width="63"  Margin="20 0" Foreground="Black" Background="LightBlue" Click="btnResetTimer_Click" Content="179">
+        <Image Source="avares://AAgIO/Assets/ResetTimer.png"/>
+      </Button>
+      <ToggleButton x:Name="cboxLogNMEA" Height="58" Width="63"  Margin="20 0" Background="Transparent" Checked="cboxLogNMEA_CheckedChanged">
+            <Image Source="avares://AAgIO/Assets/LogNMEA.png"/>
+      </ToggleButton>      
+       <Button x:Name="btnWindowsShutDown" Height="58" Width="63" Margin="20 0" Foreground="White" Background="LightBlue" Click="btnWindowsShutDown_Click">
+        <Image Source="avares://AAgIO/Assets/WindowsShutDown.png"/>
+      </Button>
+     <!--/StatusBar-->
+        
+    </StackPanel>
+  </Grid>
+</Window>
+

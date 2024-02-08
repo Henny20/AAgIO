@@ -1,0 +1,19 @@
+<Window x:Class="AAgIO.Views.CommSaverView"
+		xmlns="https://github.com/avaloniaui" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" SizeToContent="WidthAndHeight" CanResize="False"
+	Title="Save Settings">
+	<Grid Height="304" Width="723" Margin="20">
+		<TextBlock x:Name="label3" Height="32" Width="60" FontSize="11" FontFamily="Microsoft Sans Serif" TabIndex="219" Margin="153,136,510,136" HorizontalAlignment="Right" VerticalAlignment="Bottom" >Or...</TextBlock>
+		<Button x:Name="btnSerialCancel" Height="75" Width="84" TabIndex="218" Click="btnSerialCancel_Click" Margin="623,208,16,21" HorizontalAlignment="Right" VerticalAlignment="Bottom" >
+		     <Image Source="avares://AAgIO/Assets/Cancel64.png"/>
+		</Button>
+		<TextBlock x:Name="label2" Height="32" Width="207" FontSize="11" FontFamily="Microsoft Sans Serif" TabIndex="217" Margin="82,40,434,232" HorizontalAlignment="Right" VerticalAlignment="Bottom" >Overwrite This File:</TextBlock>
+		<TextBlock x:Name="label1" Height="32" Width="187" FontSize="11" FontFamily="Microsoft Sans Serif" TabIndex="216" Margin="82,200,454,72" HorizontalAlignment="Right" VerticalAlignment="Bottom" >Enter New Name:</TextBlock>
+		<Button x:Name="btnSave" Height="75" Width="84" TabIndex="215" Click="btnSave_Click" Margin="520,208,119,21" HorizontalAlignment="Right" VerticalAlignment="Bottom" >
+		   <Image Source="avares://AAgIO/Assets/VehFileSave.png"/>
+		</Button>
+		<TextBox x:Name="tboxName" Height="36" Width="511" TabIndex="214"  TextInput="tboxName_OnTextInput" Margin="2,229,210,39" HorizontalAlignment="Right" VerticalAlignment="Bottom" TextWrapping="Wrap" ></TextBox><!--Click="tboxName_Click"-->
+		<TextBlock x:Name="lblLast" Height="32" Width="278" FontSize="11" FontFamily="Microsoft Sans Serif" TabIndex="213" Margin="15,-6,430,278" HorizontalAlignment="Right" VerticalAlignment="Bottom" >Settings And Configuration</TextBlock>
+		<ComboBox x:Name="cboxEnv" Height="43" Width="511" TabIndex="212" Margin="2,66,210,195" HorizontalAlignment="Right" VerticalAlignment="Bottom" /> <!--SelectionChanged="cboxVeh_SelectedIndexChanged" /-->
+	</Grid>
+</Window>
+

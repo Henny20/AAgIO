@@ -1,0 +1,145 @@
+<?xml version="1.0"?>
+<Window xmlns="https://github.com/avaloniaui" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" x:Class="AAgIO.Views.CommSetGPSView" Title="Connect GPS" SizeToContent="WidthAndHeight" CanResize="False">
+  <Window.Styles>
+      <StyleInclude Source="/Styles/GroupBox.axaml" />
+  </Window.Styles>
+  <Grid Height="696" Width="929">
+    <TextBlock x:Name="lblFromGPS" Height="36" Width="73" FontSize="11" FontFamily="Microsoft Sans Serif" TabIndex="172" Foreground="Black" Background="Transparent" Margin="804,310,52,350" HorizontalAlignment="Right" VerticalAlignment="Bottom">---</TextBlock>
+    <TextBlock x:Name="lblFromMU" Height="36" Width="73" FontSize="11" FontFamily="Microsoft Sans Serif" TabIndex="175" Foreground="Black" Background="Transparent" Margin="804,353,52,307" HorizontalAlignment="Right" VerticalAlignment="Bottom">---</TextBlock>
+    <TextBlock x:Name="lblFromSteerModule" Height="36" Width="73" FontSize="11" FontFamily="Microsoft Sans Serif" TabIndex="173" Foreground="Black" Background="Transparent" Margin="804,397,52,263" HorizontalAlignment="Right" VerticalAlignment="Bottom">---</TextBlock>
+    <TextBlock x:Name="lblFromMachineModule" Height="36" Width="73" FontSize="11" FontFamily="Microsoft Sans Serif" TabIndex="174" Foreground="Black" Background="Transparent" Margin="804,439,52,221" HorizontalAlignment="Right" VerticalAlignment="Bottom">---</TextBlock>
+    <Image Source="avares://AAgIO/Assets/Com_IMUModule.png" Height="120" Width="120" Margin="20,350,700,600"/>
+    <TextBlock x:Name="lblIMU" Height="32" Width="59" FontSize="11" FontFamily="Microsoft Sans Serif" TabIndex="83" Margin="725,356,145,308" HorizontalAlignment="Right" VerticalAlignment="Bottom">IMU</TextBlock>
+    <Image Source="avares://AAgIO/Assets/Com_AutosteerModule.png" Height="120" Width="120" Margin="20, 500,700,300"/>
+    <TextBlock x:Name="lblSteer" Height="32" Width="69" FontSize="11" FontFamily="Microsoft Sans Serif" TabIndex="82" Margin="725,399,135,265" HorizontalAlignment="Right" VerticalAlignment="Bottom">Steer</TextBlock>
+    <Image Source="avares://AAgIO/Assets/Com_Module2.png" Height="120" Width="120" Margin="20 650,700,300"/>
+    <TextBlock x:Name="lblMachine" Height="32" Width="69" FontSize="11" FontFamily="Microsoft Sans Serif" TabIndex="81" Margin="725,441,135,223" HorizontalAlignment="Right" VerticalAlignment="Bottom">Mach</TextBlock>
+    <Image Source="avares://AAgIO/Assets/Satellite.png" Height="120" Width="120" Margin="27,49,750,600"/>
+    <TextBlock x:Name="lblGPS" Height="32" Width="57" FontSize="11" FontFamily="Microsoft Sans Serif" TabIndex="79" Margin="725,312,147,352" HorizontalAlignment="Right" VerticalAlignment="Bottom">GPS</TextBlock>
+    <TextBlock x:Name="label6" Height="32" Width="66" FontSize="11" FontFamily="Microsoft Sans Serif" TabIndex="78" Margin="669,356,194,308" HorizontalAlignment="Right" VerticalAlignment="Bottom">IMU:</TextBlock>
+    <TextBlock x:Name="label5" Height="32" Width="76" FontSize="11" FontFamily="Microsoft Sans Serif" TabIndex="77" Margin="659,399,194,265" HorizontalAlignment="Right" VerticalAlignment="Bottom">Steer:</TextBlock>
+    <TextBlock x:Name="label4" Height="32" Width="105" FontSize="11" FontFamily="Microsoft Sans Serif" TabIndex="76" Margin="670,441,174,223" HorizontalAlignment="Right" VerticalAlignment="Bottom">Machine:</TextBlock>
+    <TextBlock x:Name="label1" Height="32" Width="64" FontSize="11" FontFamily="Microsoft Sans Serif" TabIndex="73" Margin="671,312,194,352" HorizontalAlignment="Right" VerticalAlignment="Bottom">GPS:</TextBlock>
+    <StackPanel Margin="173,267,378,303" HorizontalAlignment="Right" VerticalAlignment="Bottom">
+      <TextBlock Text="IMU" FontWeight="Bold"/>
+      <Canvas Height="102" Width="354">
+        <TextBlock x:Name="lblCurrentIMU" Height="27" Width="121" FontSize="11" FontFamily="Microsoft Sans Serif" TabIndex="51" Margin="16,22,792,647" HorizontalAlignment="Right" VerticalAlignment="Bottom">Port</TextBlock>
+        <ComboBox x:Name="cboxIMU" Height="37" Width="124" TabIndex="50" Margin="0,43,805,616" HorizontalAlignment="Right" VerticalAlignment="Bottom"/>
+        <!--SelectionChanged="cboxIMU_SelectedIndexChanged" /-->
+        <Button x:Name="btnCloseIMU" Height="58" Width="101" TabIndex="44" Background="Transparent" Click="btnCloseIMU_Click" Margin="252,30,576,608" HorizontalAlignment="Right" VerticalAlignment="Bottom">
+            <Image Source="avares://AAgIO/Assets/USB_Disconnect.png" Height="40" Width="40"/>
+         </Button>   
+        <Button x:Name="btnOpenIMU" Height="58" Width="101" TabIndex="45" Background="Transparent" Click="btnOpenIMU_Click" Margin="151,30,677,608" HorizontalAlignment="Right" VerticalAlignment="Bottom">
+              <Image Source="avares://AAgIO/Assets/USB_Connect.png" Height="40" Width="40"/>
+        </Button>
+      </Canvas>
+    </StackPanel>
+    <StackPanel Margin="173 551 378 19" HorizontalAlignment="Right" VerticalAlignment="Bottom">
+    <TextBlock Text="Machine" FontWeight="Bold"/>
+       <Canvas Height="102" Width="354">
+        <ComboBox x:Name="cboxMachineModulePort" Height="37" Width="124" TabIndex="64" Margin="0,47,805,612" HorizontalAlignment="Right" VerticalAlignment="Bottom"/> <!-- SelectionChanged="cboxMachineModulePort_SelectedIndexChanged" /-->
+        <TextBlock x:Name="lblCurrentMachineModulePort" Height="27" Width="121" FontSize="11" FontFamily="Microsoft Sans Serif" TabIndex="70" Margin="16,26,792,643" HorizontalAlignment="Right" VerticalAlignment="Bottom">Port</TextBlock>
+        <Button x:Name="btnOpenSerialMachineModule" Height="58" Width="101" TabIndex="53" Background="Transparent" Click="btnOpenSerialMachineModule_Click" Margin="151,34,677,604" HorizontalAlignment="Right" VerticalAlignment="Bottom">
+           <Image Source="avares://AAgIO/Assets/USB_Connect.png" Height="40" Width="40"/>
+        </Button>
+        <Button x:Name="btnCloseSerialMachineModule" Height="58" Width="101" TabIndex="52" Background="Transparent" Click="btnCloseSerialMachineModule_Click" Margin="258,34,570,604" HorizontalAlignment="Right" VerticalAlignment="Bottom">
+             <Image Source="avares://AAgIO/Assets/USB_Disconnect.png" Height="40" Width="40"/>
+          </Button>   
+      </Canvas>
+    </StackPanel>
+    <StackPanel Name="Module3" Margin="1164,207,-612,390" HorizontalAlignment="Right" VerticalAlignment="Bottom">
+      <Canvas Height="75" Width="353">
+        <TextBlock x:Name="lblCurrentModule3Port" Height="27" Width="49" FontSize="11" FontFamily="Microsoft Sans Serif" TabIndex="71" Margin="115,4,765,665" HorizontalAlignment="Right" VerticalAlignment="Bottom">Port</TextBlock>
+        <ComboBox x:Name="cboxModule3Port" IsVisible="false" Height="37" Width="124" TabIndex="64" Margin="0,27,805,632" HorizontalAlignment="Right" VerticalAlignment="Bottom"/> <!--SelectionChanged="cboxModule3Port_SelectedIndexChanged"/-->
+        <Button x:Name="btnOpenSerialModule3" IsVisible="false" Height="58" Width="101" TabIndex="53" Background="Transparent" Click="btnOpenSerialModule3_Click" Margin="151,6,677,632" HorizontalAlignment="Right" VerticalAlignment="Bottom">
+        </Button>      
+        <Button x:Name="btnCloseSerialModule3" IsVisible="false" Height="58" Width="101" TabIndex="52" Background="Transparent" Click="btnCloseSerialModule3_Click" Margin="258,4,570,634" HorizontalAlignment="Right" VerticalAlignment="Bottom">
+         </Button>   
+      </Canvas>
+    </StackPanel>
+    <StackPanel Margin="173,409,378,161" HorizontalAlignment="Right" VerticalAlignment="Bottom">
+      <TextBlock Text="Steer" FontWeight="Bold"/>
+      <Canvas Height="102" Width="354">
+        <ComboBox x:Name="cboxSteerModulePort" Height="37" Width="124" TabIndex="64" Margin="0,42,805,617" HorizontalAlignment="Right" VerticalAlignment="Bottom"/> <!--SelectionChanged="cboxSteerModule_SelectedIndexChanged"/-->
+        <TextBlock x:Name="lblCurrentSteerModulePort" Height="27" Width="121" FontSize="11" FontFamily="Microsoft Sans Serif" TabIndex="69" Margin="16,21,792,648" HorizontalAlignment="Right" VerticalAlignment="Bottom">Port</TextBlock>
+        <Button x:Name="btnOpenSerialSteerModule" Height="58" Width="101" TabIndex="53" Background="Transparent" Click="btnOpenSerialSteerModule_Click" Margin="151,30,677,608" HorizontalAlignment="Right" VerticalAlignment="Bottom">
+             <Image Source="avares://AAgIO/Assets/USB_Connect.png" Height="40" Width="40"/>
+        </Button>     
+        <Button x:Name="btnCloseSerialSteerModule" Height="58" Width="101" TabIndex="52" Background="Transparent" Click="btnCloseSerialSteerModule_Click" Margin="258,30,570,608" HorizontalAlignment="Right" VerticalAlignment="Bottom">
+           <Image Source="avares://AAgIO/Assets/USB_Disconnect.png" Height="40" Width="40"/>
+        </Button>   
+      </Canvas>
+    </StackPanel>
+    <StackPanel Margin="1118,31,-599,536" HorizontalAlignment="Right" VerticalAlignment="Bottom">
+      <!--GroupBox.Header><TextBlock Text="GPS Port 2"/></GroupBox.Header-->
+       <Canvas Height="105" Width="386">
+        <ComboBox x:Name="cboxPort2"  IsVisible="false" Height="37" Width="169" TabIndex="50" Margin="0,22,760,637" HorizontalAlignment="Right" VerticalAlignment="Bottom"/> <!--SelectionChanged="cboxPort2_SelectedIndexChanged"/-->
+        <ComboBox x:Name="cboxBaud2" IsVisible="false" SelectedIndex="0" Height="37" Width="127" TabIndex="49" Margin="188,22,614,637" HorizontalAlignment="Right" VerticalAlignment="Bottom"/> <!--SelectionChanged="cboxBaud2_SelectedIndexChanged"-->
+          <!--ComboBoxItem>4800</ComboBoxItem>
+          <ComboBoxItem>9600</ComboBoxItem>
+          <ComboBoxItem>19200</ComboBoxItem>
+          <ComboBoxItem>38400</ComboBoxItem>
+          <ComboBoxItem>57600</ComboBoxItem>
+          <ComboBoxItem>115200</ComboBoxItem>
+        </ComboBox-->
+        <TextBlock x:Name="lblCurrentPort2" Height="27" Width="49" FontSize="11" FontFamily="Microsoft Sans Serif" TabIndex="47" Margin="139,1,741,668" HorizontalAlignment="Right" VerticalAlignment="Bottom">Port</TextBlock>
+        <TextBlock x:Name="lblCurrentBaud2" Height="27" Width="54" FontSize="11" FontFamily="Microsoft Sans Serif" TabIndex="46" Margin="280,1,595,668" HorizontalAlignment="Right" VerticalAlignment="Bottom">Baud</TextBlock>
+        <Button x:Name="btnCloseSerial2" IsVisible="false" Height="58" Width="101" TabIndex="44" Background="Transparent" Click="btnCloseSerial2_Click" Margin="303,22,525,616" HorizontalAlignment="Right" VerticalAlignment="Bottom"/>
+        <TextBox x:Name="textBoxRcv2" IsVisible="false" Height="31" Width="176" TabIndex="40" Margin="-365,66,1118,599" HorizontalAlignment="Right" VerticalAlignment="Bottom" IsReadOnly="True" TextWrapping="Wrap"/>
+        <Button x:Name="btnOpenSerial2" IsVisible="false" Height="58" Width="101" TabIndex="45" Background="Transparent" Click="btnOpenSerial2_Click" Margin="214,39,614,599" HorizontalAlignment="Right" VerticalAlignment="Bottom"/>
+      </Canvas>
+    </StackPanel>
+    <Button x:Name="btnRescan" Height="63" Width="89" TabIndex="58" Background="Transparent" Click="btnRescan_Click" Margin="655,605,185,28" HorizontalAlignment="Right" VerticalAlignment="Bottom">
+         <Image Source="avares://AAgIO/Assets/ScanPorts.png" Height="40" Width="40"/>
+         </Button>   
+    <Button x:Name="btnSerialOK" Height="63" Width="91" TabIndex="59" Background="Transparent" Click="btnSerialOK_Click" Margin="816,604,22,29" HorizontalAlignment="Right" VerticalAlignment="Bottom">
+       <Image Source="avares://AAgIO/Assets/OK64.png" Height="40" Width="40"/>
+         </Button>   
+    <HeaderedContentControl Header="GPS" Background="Gray" Margin="173,-3,5,443" HorizontalAlignment="Right" VerticalAlignment="Bottom">
+      <!--GroupBox.Header><TextBlock Text="GPS"/></GroupBox.Header-->
+      <Canvas Height="232" Width="727">
+        <TextBlock x:Name="label3" Height="38" Width="91" FontSize="11" FontFamily="Microsoft Sans Serif" TabIndex="97" Margin="154,115,684,543" HorizontalAlignment="Right" VerticalAlignment="Bottom">RTCM</TextBlock>
+        <Button x:Name="btnCloseRTCM" Height="58" Width="56" TabIndex="95" Background="Transparent" Click="btnCloseRTCM_Click" Margin="663,97,210,541" HorizontalAlignment="Right" VerticalAlignment="Bottom">
+            <Image Source="avares://AAgIO/Assets/USB_Disconnect.png" Height="40" Width="40"/>
+         </Button>   
+        <Button x:Name="btnOpenRTCM" Height="58" Width="58" TabIndex="96" Background="Transparent" Click="btnOpenRTCM_Click" Margin="562,97,309,541" HorizontalAlignment="Right" VerticalAlignment="Bottom">
+            <Image Source="avares://AAgIO/Assets/USB_Connect.png" Height="40" Width="40"/>
+         </Button>   
+        <TextBlock x:Name="labelDifferentRtcmPort" Height="52" Width="137" FontSize="11" FontFamily="Microsoft Sans Serif" TabIndex="94" Margin="22,112,770,532" HorizontalAlignment="Right" VerticalAlignment="Bottom">Different Port&#x0d;&#x0a;Then GPS ?</TextBlock>
+        <ComboBox x:Name="cboxRtcmPort" Height="37" Width="124" TabIndex="54" Margin="234,112,571,547" HorizontalAlignment="Right" VerticalAlignment="Bottom"/> <!--SelectionChanged="cboxRtcmPort_SelectedIndexChanged"/-->
+        <ComboBox x:Name="cboxRtcmBaud" SelectedIndex="0" Height="37" Width="127" TabIndex="53" Margin="385,112,417,547" HorizontalAlignment="Right" VerticalAlignment="Bottom"> <!--SelectionChanged="cboxRtcmBaud_SelectedIndexChanged"-->
+          <!--ComboBoxItem>4800</ComboBoxItem>
+          <ComboBoxItem>9600</ComboBoxItem>
+          <ComboBoxItem>19200</ComboBoxItem>
+          <ComboBoxItem>38400</ComboBoxItem>
+          <ComboBoxItem>57600</ComboBoxItem>
+          <ComboBoxItem>115200</ComboBoxItem>
+          <ComboBoxItem>128000</ComboBoxItem>
+          <ComboBoxItem>256000</ComboBoxItem-->
+        </ComboBox>
+        <TextBlock x:Name="labelRtcmPort" Height="27" Width="130" FontSize="11" FontFamily="Microsoft Sans Serif" TabIndex="52" Margin="244,91,555,578" HorizontalAlignment="Right" VerticalAlignment="Bottom">RTCM Port</TextBlock>
+        <TextBlock x:Name="labelRtcmBaud" Height="27" Width="133" FontSize="11" FontFamily="Microsoft Sans Serif" TabIndex="51" Margin="395,91,401,578" HorizontalAlignment="Right" VerticalAlignment="Bottom">RTCM Baud</TextBlock>
+        <ComboBox x:Name="cboxPort"  Height="37" Width="124" TabIndex="50" Margin="234,22,571,637" HorizontalAlignment="Right" VerticalAlignment="Bottom"/> <!--SelectionChanged="cboxPort_SelectedIndexChanged_1"/-->
+        <ComboBox x:Name="cboxBaud" SelectedIndex="0" Height="37" Width="127" TabIndex="49" Margin="385,22,417,637" HorizontalAlignment="Right" VerticalAlignment="Bottom"> <!--SelectionChanged="cboxBaud_SelectedIndexChanged_1"-->
+          <!--ComboBoxItem>4800</ComboBoxItem>
+          <ComboBoxItem>9600</ComboBoxItem>
+          <ComboBoxItem>19200</ComboBoxItem>
+          <ComboBoxItem>38400</ComboBoxItem>
+          <ComboBoxItem>57600</ComboBoxItem>
+          <ComboBoxItem>115200</ComboBoxItem-->
+        </ComboBox>
+        <TextBlock x:Name="lblCurrentPort" Height="27" Width="130" FontSize="11" FontFamily="Microsoft Sans Serif" TabIndex="47" Margin="244,1,555,668" HorizontalAlignment="Right" VerticalAlignment="Bottom">GPS Port</TextBlock>
+        <TextBlock x:Name="label2" Height="38" Width="71" FontSize="11" FontFamily="Microsoft Sans Serif" TabIndex="74" Margin="174,24,684,634" HorizontalAlignment="Right" VerticalAlignment="Bottom">GPS</TextBlock>
+        <TextBlock x:Name="lblCurrentBaud" Height="27" Width="133" FontSize="11" FontFamily="Microsoft Sans Serif" TabIndex="46" Margin="395,1,401,668" HorizontalAlignment="Right" VerticalAlignment="Bottom">GPS Baud</TextBlock>
+        <Button x:Name="btnCloseSerial" Height="58" Width="56" TabIndex="44" Background="Transparent" Click="btnCloseSerial_Click" Margin="663,8,210,630" HorizontalAlignment="Right" VerticalAlignment="Bottom">
+           <Image Source="avares://AAgIO/Assets/USB_Disconnect.png" Height="40" Width="40"/>
+         </Button>   
+        <TextBox x:Name="textBoxRcv" Height="53" Width="720" TabIndex="40" Margin="2,170,207,473" HorizontalAlignment="Right" VerticalAlignment="Bottom" IsReadOnly="True" TextWrapping="Wrap"/>
+        <Button x:Name="btnOpenSerial" Height="58" Width="58" TabIndex="45" Background="Transparent" Click="btnOpenSerial_Click" Margin="562,8,309,630" HorizontalAlignment="Right" VerticalAlignment="Bottom">
+            <Image Source="avares://AAgIO/Assets/USB_Connect.png" Height="40" Width="40"/>
+         </Button>   
+      </Canvas>
+    </HeaderedContentControl>
+  </Grid>
+</Window>
+

@@ -1,0 +1,9 @@
+<Window x:Class="AAgIO.Views.TimedMessageView"
+	xmlns="https://github.com/avaloniaui" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+	Title="Drive Message">
+	<Grid Height="151" Width="272">
+		<TextBlock x:Name="lblMessage2" Height="38" Width="136" FontSize="11" FontFamily="Microsoft Sans Serif" TabIndex="1" Margin="75,56,61,57" HorizontalAlignment="Right" VerticalAlignment="Bottom" >Message 2</TextBlock>
+		<TextBlock x:Name="lblMessage" Height="38" Width="124" FontSize="11" FontFamily="Microsoft Sans Serif" TabIndex="0" Margin="12,5,136,108" HorizontalAlignment="Right" VerticalAlignment="Bottom" >Message</TextBlock>
+	</Grid>
+</Window>
+
