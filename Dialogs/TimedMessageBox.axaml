@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<Window x:Class="AAgIO.Dialogs.TimedMessageBox"
+    xmlns="https://github.com/avaloniaui"
+	xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+	xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+	xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+	SystemDecorations="BorderOnly"
+    Height="200" Width="500"
+    Title="Message">
+    <StackPanel>
+     <Border Background="Gainsboro"
+        BorderBrush="Red"
+        BorderThickness="5"
+        CornerRadius="3"
+        Padding="10" Margin="10">
+        <StackPanel x:Name = "stapa" Margin="20">
+       <!--TextBlock x:Name="mes1" Text="" FontSize="11" FontFamily="Microsoft Sans Serif" ></TextBlock-->
+        <TextBlock x:Name="mes2" Text="{Binding Message2}" FontSize="11" FontFamily="Microsoft Sans Serif"  ></TextBlock>
+        <TextBlock/>
+        </StackPanel>
+      </Border>
+    </StackPanel>
+</Window>
