@@ -1,4 +1,6 @@
 # AAgIO
 
 AAgOpenGPS is a direct port of Brian Tischler's [AgOpenGPS] (https://github.com/farmerbriantee/AgOpenGPS). Using the multiplatform Avalonia framework.
+
+Much of the code is 
 Copyright Brian Tischler.
