@@ -18,13 +18,6 @@ public partial class App : Application
     {
         gStr.Culture = new CultureInfo("nl-NL");
         
-        var fonts = Avalonia.Media.FontManager.Current.SystemFonts;
-        foreach (var item in fonts)
-        {
-           Console.WriteLine(item);
-         }
-        
-              
         if (ApplicationLifetime is IClassicDesktopStyleApplicationLifetime desktop)
         {
             desktop.MainWindow = new MainWindow();
