@@ -1,0 +1,15 @@
+<Window x:Class="AAgIO.Views.SteerGraphView"
+	xmlns="https://github.com/avaloniaui" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+	Title="AutoSteer Graph">
+	<Grid Height="211" Width="656">
+		<TextBlock x:Name="lblGain" Height="32" Width="49" FontSize="11" FontFamily="Microsoft Sans Serif" TabIndex="239" Margin="51,170,556,9" HorizontalAlignment="Right" VerticalAlignment="Bottom" >215</TextBlock>
+		<Button x:Name="btnAuto" Height="70" Width="41" TabIndex="237" Click="btnAuto_Click" Margin="-7,54,622,87" HorizontalAlignment="Right" VerticalAlignment="Bottom" >A\r\nu\r\nt\r\no</Button>
+		<Button x:Name="btnMinus" Height="61" Width="41" TabIndex="236" Click="btnMinus_Click" Margin="-7,130,622,20" HorizontalAlignment="Right" VerticalAlignment="Bottom" >-</Button>
+		<Button x:Name="btnPlus" Height="61" Width="41" TabIndex="235" Click="btnPlus_Click" Margin="-7,-13,622,163" HorizontalAlignment="Right" VerticalAlignment="Bottom" >+</Button>
+		<TextBlock x:Name="lblPWM" Height="32" Width="77" FontSize="11" FontFamily="Microsoft Sans Serif" TabIndex="194" Foreground="Lime" Margin="230,170,349,9" HorizontalAlignment="Right" VerticalAlignment="Bottom" >label5</TextBlock>
+		<TextBlock x:Name="lblSteerAng" Height="32" Width="77" FontSize="11" FontFamily="Microsoft Sans Serif" TabIndex="193" Foreground="OrangeRed" Margin="421,170,158,9" HorizontalAlignment="Right" VerticalAlignment="Bottom" >label1</TextBlock>
+		<TextBlock x:Name="label5" Height="32" Width="131" FontSize="11" FontFamily="Microsoft Sans Serif" TabIndex="196" Margin="107,170,418,9" HorizontalAlignment="Right" VerticalAlignment="Bottom" >SetPoint</TextBlock>
+		<TextBlock x:Name="label1" Height="32" Width="114" FontSize="11" FontFamily="Microsoft Sans Serif" TabIndex="195" Margin="310,170,232,9" HorizontalAlignment="Right" VerticalAlignment="Bottom" >Actual</TextBlock>
+	</Grid>
+</Window>
+

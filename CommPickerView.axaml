@@ -1,0 +1,12 @@
+<Window x:Class="AAgIO.Views.CommPickerView"
+			xmlns="https://github.com/avaloniaui" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+	Title="Load Settings">
+	<Grid Height="219" Width="572" Margin="20">
+		<Button x:Name="btnSerialCancel" Height="76" Width="88" TabIndex="214" Margin="471,125,13,18" HorizontalAlignment="Right" VerticalAlignment="Bottom" >
+		     <Image Source="avares://AAgIO/Assets/Cancel64.png"/>
+		</Button>
+		<TextBlock x:Name="lblLast" Height="32" Width="269" FontSize="11" FontFamily="Microsoft Sans Serif" TabIndex="213" Margin="15,-6,288,193" HorizontalAlignment="Right" VerticalAlignment="Bottom" >Choose AgIO Settings File</TextBlock>
+		<ComboBox x:Name="cboxEnv" ItemsSource="{Binding fileList}" Height="43" Width="538" TabIndex="212" Margin="2,27,32,149" HorizontalAlignment="Right" VerticalAlignment="Bottom"/> <!--SelectionChanged="cboxVeh_SelectedIndexChanged" /-->
+	</Grid>
+</Window>
+

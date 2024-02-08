@@ -1,0 +1,23 @@
+<Window x:Class="AAgIO.Views.SourceView"
+		xmlns="https://github.com/avaloniaui" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+	Title="Source Data">
+	<Grid Height="610" Width="985">
+		<Button x:Name="btnSort" Height="64" Width="96" TabIndex="102" Click="btnSort_Click" Margin="2,522,887,24" HorizontalAlignment="Right" VerticalAlignment="Bottom" ></Button>
+		<Button x:Name="button1" Height="64" Width="91" TabIndex="101" Click="button1_Click" Margin="829,524,65,22" HorizontalAlignment="Right" VerticalAlignment="Bottom" ></Button>
+		<Button x:Name="btnUseMount" Height="64" Width="101" TabIndex="100" Click="btnUseMount_Click" Margin="470,523,414,23" HorizontalAlignment="Right" VerticalAlignment="Bottom" ></Button>
+		<Button x:Name="btnSite" Height="64" Width="157" TabIndex="100" Click="btnSite_Click" Margin="635,522,193,24" HorizontalAlignment="Right" VerticalAlignment="Bottom" ></Button>
+		<TextBlock x:Name="lblCurrentAutoSteerPort" Height="27" Width="68" FontSize="11" FontFamily="Microsoft Sans Serif" TabIndex="99" Margin="146,546,771,37" HorizontalAlignment="Right" VerticalAlignment="Bottom" >Mount:</TextBlock>
+		<TextBox x:Name="tboxMount" Height="33" Width="244" TabIndex="98" Margin="200,539,541,38" HorizontalAlignment="Right" VerticalAlignment="Bottom" IsReadOnly="True" TextWrapping="Wrap" ></TextBox>
+		<ListBox x:Name="lvLines" Height="513" Width="970" Margin="-7,-12,22,109" HorizontalAlignment="Right" VerticalAlignment="Bottom" >
+		</ListBox>
+		<!--GridView >
+<GridViewColumn Header="Distance" Width="150" />
+<GridViewColumn Header="Mount Point" Width="250" />
+<GridViewColumn Header="Lat" Width="100" />
+<GridViewColumn Header="Lon" Width="100" />
+<GridViewColumn Header="Format" Width="150" />
+<GridViewColumn Header="Network" Width="300" />
+		</GridView -->		
+	</Grid>
+</Window>
+
