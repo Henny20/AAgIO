@@ -103,7 +103,7 @@ namespace AAgIO.Views
             {
                 if (IPA.AddressFamily == AddressFamily.InterNetwork)
                 {
-                    label9.Text += IPA.ToString() + "\r\n";
+                    label9.Text += IPA.ToString() + Environment.NewLine;
                 }
             }
         }
@@ -159,7 +159,7 @@ namespace AAgIO.Views
 
         private async void btnSendSubnet_Click(object sender, RoutedEventArgs e)
         {
-           var result3 = mf.callMessageBox( "Change Modules and AgIO Subnet To: \r\n\r\n" +
+           var result3 = mf.callMessageBox( "Change Modules and AgIO Subnet To: " + Environment.NewLine + Environment.NewLine +
                 ipToSend[0].ToString() + "." +
                 ipToSend[1].ToString() + "." +
                 ipToSend[2].ToString() + "??????? " +
