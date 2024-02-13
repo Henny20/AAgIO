@@ -10,7 +10,7 @@ Copyright Brian Tischler.
 
 <h3>How to build on Fedora(Debug)</h3>
 
-```
+```bash
 sudo dnf install dotnet-sdk-6.0
 
 cd AAgIO
