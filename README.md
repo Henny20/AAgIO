@@ -21,5 +21,6 @@ dotnet build (or dotnet run for the impatient)
 ```
 
 Building on dotnet8: Change AAgIO.csproj
+```xml
 <TargetFramework>net8.0</TargetFramework>
-
+```
