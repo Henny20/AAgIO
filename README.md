@@ -8,8 +8,9 @@ Copyright Brian Tischler.
 
 
 
-How to build on Fedora(Debug)
+<h3>How to build on Fedora(Debug)</h3>
 
+```
 sudo dnf install dotnet-sdk-6.0
 
 cd AAgIO
@@ -17,7 +18,7 @@ cd AAgIO
 dotnet build (or dotnet run for the impatient)
 
 ./bin/Debug/net6.0/AAgIO
-
+```
 
 Building on dotnet8: Change AAgIO.csproj
 <TargetFramework>net8.0</TargetFramework>
