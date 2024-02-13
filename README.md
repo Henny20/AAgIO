@@ -15,7 +15,7 @@ sudo dnf install dotnet-sdk-6.0
 
 cd AAgIO
 
-dotnet build (or dotnet run for the impatient)
+dotnet build
 
 ./bin/Debug/net6.0/AAgIO
 ```
