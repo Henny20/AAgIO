@@ -25,5 +25,5 @@ Building on dotnet8: Change AAgIO.csproj
 <TargetFramework>net8.0</TargetFramework>
 ```
 
-<img src="https://github.com/Henny20/AAgOpenGPS/blob/main/Assets/Screenshot.png" width=60%  />
+<img src="https://github.com/Henny20/AAgIO/blob/main/Assets/Screenshot.png" width=60%  />
 
