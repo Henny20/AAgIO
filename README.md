@@ -29,5 +29,7 @@ Building on dotnet8: Change AAgIO.csproj
 
 <h3>Android</h3>
 
+With UsbSerialForAndroid
+
 <img src="https://github.com/Henny20/AAgIO/blob/main/Assets/Screenshot2.jpeg" width=50%  />
 
