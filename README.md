@@ -27,3 +27,7 @@ Building on dotnet8: Change AAgIO.csproj
 
 <img src="https://github.com/Henny20/AAgIO/blob/main/Assets/Screenshot.png" width=50%  />
 
+<h3>Android</h3>
+
+<img src="https://github.com/Henny20/AAgIO/blob/main/Assets/Screenshot2.png" width=50%  />
+
